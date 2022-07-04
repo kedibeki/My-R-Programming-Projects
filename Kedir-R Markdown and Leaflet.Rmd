@@ -1,0 +1,29 @@
+---
+title: 'Peer-graded Assignment: R Markdown and Leaflet'
+author: "Kedir Nasir Omer"
+date: "July 04/2022...Happy Independence Day!!!"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Background
+Create a web page using R Markdown that features a map created with Leaflet.
+
+Host your webpage on either GitHub Pages, RPubs, or NeoCities.
+
+Your webpage must contain the date that you created the document, and it must contain a map created with Leaflet. We would love to see you show off your creativity!
+
+## Assignment:
+
+```{r}
+library(leaflet)
+```
+
+```{r}
+m_map <- leaflet() %>% addTiles()   
+m_map <- m_map %>% addMarkers(lat= 21.020486345650983, lng= 105.76528349150303, popup="Search here for White House Penssylvania avenue, Washington, DC ")
+m_map  
+```
